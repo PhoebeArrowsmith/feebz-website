@@ -148,13 +148,28 @@
     0% {
       background-image: var(--br-1);
     }
-    25% {
+    11.1% {
+      background-image: var(--tr-2);
+    }
+    22.2% {
+      background-image: var(--tr-3);
+    }
+    33.3% {
+      background-image: var(--tr-4);
+    }
+    44.4% {
+      background-image: var(--tr-5);
+    }
+    55.5% {
+      background-image: var(--br-6);
+    }
+    66.6% {
       background-image: var(--br-2);
     }
-    50% {
+    77.7% {
       background-image: var(--br-3);
     }
-    75% {
+    88.8% {
       background-image: var(--br-4);
     }
     100% {
@@ -166,19 +181,35 @@
     0% {
       background-image: var(--br-5);
     }
-    25% {
+    11.1% {
       background-image: var(--br-4);
     }
-    50% {
+    22.2% {
       background-image: var(--br-3);
     }
-    75% {
+    33.3% {
       background-image: var(--br-2);
+    }
+    44.4% {
+      background-image: var(--br-6);
+    }
+    55.5% {
+      background-image: var(--tr-5);
+    }
+    66.6% {
+      background-image: var(--tr-4);
+    }
+    77.7% {
+      background-image: var(--tr-3);
+    }
+    88.8% {
+      background-image: var(--tr-2);
     }
     100% {
       background-image: var(--br-1);
     }
   }
+
   /* ANIMATE BOTTOM LEFT */
   
   .animate-bottom-left {
@@ -193,13 +224,28 @@
     0% {
       background-image: var(--bl-1);
     }
-    25% {
+    11.1% {
+      background-image: var(--tl-2);
+    }
+    22.2% {
+      background-image: var(--tl-3);
+    }
+    33.3% {
+      background-image: var(--tl-4);
+    }
+    44.4% {
+      background-image: var(--tl-5);
+    }
+    55.5% {
+      background-image: var(--bl-6);
+    }
+    66.6% {
       background-image: var(--bl-2);
     }
-    50% {
+    77.7% {
       background-image: var(--bl-3);
     }
-    75% {
+    88.8% {
       background-image: var(--bl-4);
     }
     100% {
@@ -211,14 +257,29 @@
     0% {
       background-image: var(--bl-5);
     }
-    25% {
+    11.1% {
       background-image: var(--bl-4);
     }
-    50% {
+    22.2% {
       background-image: var(--bl-3);
     }
-    75% {
+    33.3% {
       background-image: var(--bl-2);
+    }
+    44.4% {
+      background-image: var(--bl-6);
+    }
+    55.5% {
+      background-image: var(--tl-5);
+    }
+    66.6% {
+      background-image: var(--tl-4);
+    }
+    77.7% {
+      background-image: var(--tl-3);
+    }
+    88.8% {
+      background-image: var(--tl-2);
     }
     100% {
       background-image: var(--bl-1);
