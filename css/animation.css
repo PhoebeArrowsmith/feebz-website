@@ -1,6 +1,9 @@
 /* GERNERAL ANIMATION SETTINGS */
 
-.animate-top-left, .reverse-animate-top-left, .animate-top-right, .reverse-animate-top-right {
+.animate-top-left, .reverse-animate-top-left, 
+.animate-top-right, .reverse-animate-top-right, 
+.animate-bottom-left, .reverse-animate-bottom-left,
+.animate-bottom-right, .reverse-animate-bottom-right {
     animation-fill-mode: forwards;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
@@ -130,3 +133,94 @@
         background-image: var(--tr-1);
     }
 }
+
+/* ANIMATE BOTTOM RIGHT */
+
+.animate-bottom-right {
+    animation-name: bottom-right;
+  }
+  
+  .reverse-animate-bottom-right {
+    animation-name: reverse-bottom-right;
+  }
+  
+  @keyframes bottom-right {
+    0% {
+      background-image: var(--br-1);
+    }
+    25% {
+      background-image: var(--br-2);
+    }
+    50% {
+      background-image: var(--br-3);
+    }
+    75% {
+      background-image: var(--br-4);
+    }
+    100% {
+      background-image: var(--br-5);
+    }
+  }
+  
+  @keyframes reverse-bottom-right {
+    0% {
+      background-image: var(--br-5);
+    }
+    25% {
+      background-image: var(--br-4);
+    }
+    50% {
+      background-image: var(--br-3);
+    }
+    75% {
+      background-image: var(--br-2);
+    }
+    100% {
+      background-image: var(--br-1);
+    }
+  }
+  /* ANIMATE BOTTOM LEFT */
+  
+  .animate-bottom-left {
+    animation-name: bottom-left;
+  }
+  
+  .reverse-animate-bottom-left {
+    animation-name: reverse-bottom-left;
+  }
+  
+  @keyframes bottom-left {
+    0% {
+      background-image: var(--bl-1);
+    }
+    25% {
+      background-image: var(--bl-2);
+    }
+    50% {
+      background-image: var(--bl-3);
+    }
+    75% {
+      background-image: var(--bl-4);
+    }
+    100% {
+      background-image: var(--bl-5);
+    }
+  }
+  
+  @keyframes reverse-bottom-left {
+    0% {
+      background-image: var(--bl-5);
+    }
+    25% {
+      background-image: var(--bl-4);
+    }
+    50% {
+      background-image: var(--bl-3);
+    }
+    75% {
+      background-image: var(--bl-2);
+    }
+    100% {
+      background-image: var(--bl-1);
+    }
+  }

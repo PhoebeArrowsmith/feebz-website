@@ -1,24 +1,23 @@
 //Define DOM elements
 const heroImage = document.querySelector("#hero__animation__img");
 
-const tl = document.querySelector("#grid_tl");
-const tr = document.querySelector("#grid_tr");
-// const bl = document.querySelector("#grid_bl");
-// const br = document.querySelector("#grid_br");
+const tl = document.querySelector("#grid__tl");
+const tr = document.querySelector("#grid__tr");
+const bl = document.querySelector("#grid__bl");
+const br = document.querySelector("#grid__br");
 
-const tlBtn = document.querySelector("#grid_tl__btn");
-const trBtn = document.querySelector("#grid_tr__btn");
-// const blBtn = document.querySelector("#grid_bl__btn");
-// const brBtn = document.querySelector("#grid_br__btn");
+const tlBtn = document.querySelector("#grid__tl__btn");
+const trBtn = document.querySelector("#grid__tr__btn");
+const blBtn = document.querySelector("#grid__bl__btn");
+const brBtn = document.querySelector("#grid__br__btn");
 
-const tlContent = document.querySelector("#grid_tl__content");
-const trContent = document.querySelector("#grid_tr__content");
-// const blContent = document.querySelector("#grid_bl__content");
-// const brContent = document.querySelector("#grid_br__content");
+const tlContent = document.querySelector("#grid__tl__content");
+const trContent = document.querySelector("#grid__tr__content");
+const blContent = document.querySelector("#grid__bl__content");
+const brContent = document.querySelector("#grid__br__content");
 
-// const projectOne = document.querySelector(".p-1");
-// const projectTwo = document.querySelector(".p-2");
-// const projectThree = document.querySelector(".p-3");
+const flavourOne = document.querySelector(".f-1");
+const flavourTwo = document.querySelector(".f-2");
 
 //Define color and positions
 const bgColor ="var(--bg)";
@@ -26,17 +25,17 @@ const bgColorAlt ="var(--bg-alt)";
 const textColor ="var(--text)";
 const textColorAlt ="var(--text-alt)";
 
-let tlActive = "translate(5vw) translateY(0)";
-let tlHidden = "transform: translateX(-100vw) translateY(-100vh);";
+let tlActive = "translateX(5vw) translateY(0)";
+let tlHidden = "translateX(-100vw) translateY(-100vh)";
 
-let trActive = "translate(-5vw) translateY(0)";
-let trHidden = "transform: translateX(100vw) translateY(-100vh);";
+let trActive = "translateX(-5vw) translateY(0)";
+let trHidden = "translateX(100vw) translateY(-100vh)";
 
-let blActive = "translate(10vw) translateY(7vh)";
-let blHidden = "transform: translateX(-100vw) translateY(100vh);";
+let blActive = "translateX(10vw) translateY(7vh)";
+let blHidden = "translateX(-100vw) translateY(100vh)";
 
 let brActive = "translate(-5vw) translateY(0)";
-let brHidden = "transform: translateX(100vw) translateY(100vh);";
+let brHidden = "translateX(100vw) translateY(100vh)";
 
 // Define corner that is open
 let activeCorner = "";
@@ -48,9 +47,9 @@ window.addEventListener("resize", handleWindowResize);
 function handleWindowResize() {
      switch (activeCorner) {
          case "top-left":
-            if (window.innerwidth <= 1100) {
-                tlActive = "translate(0) translateY(0)";
-                tlContent.style.transform = "translate(5vw) translateY(0)";
+            if (window.innerWidth <= 1100) {
+                tlActive = "translateX(0) translateY(0)";
+                tlContent.style.transform = "translateX(0) translateY(0)";
                 tlContent.style.width = "100vw";
                 tlContent.style.height = "100vh";
                 tlContent.style.top = "0";
@@ -61,11 +60,11 @@ function handleWindowResize() {
                 tlContent.style.zIndex = "200";
                 tlBtn.style.zIndex = "300";
                 trBtn.style.zIndex = "100";
-                // blBtn.style.zIndex = "100";
-                // brBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
             } else {
                 tlActive = "translate(5vw) translateY(0)";
-                tlContent.style.transform = "translate(5vw) translateY(0)";
+                tlContent.style.transform = "translateX(5vw) translateY(0)";
                 tlContent.style.width = "30vw";
                 tlContent.style.height = "0";
                 tlContent.style.top = "10vh";
@@ -74,9 +73,9 @@ function handleWindowResize() {
              break;
 
          case "top-right":
-            if (window.innerwidth <= 1100) {
-                trActive = "translate(0) translateY(0)";
-                trContent.style.transform = "translate(0) translateY(0)";
+            if (window.innerWidth <= 1100) {
+                trActive = "translateX(0) translateY(0)";
+                trContent.style.transform = "translateX(0) translateY(0)";
                 trContent.style.width = "100vw";
                 trContent.style.height = "100vh";
                 trContent.style.top = "0";
@@ -87,10 +86,10 @@ function handleWindowResize() {
                 trContent.style.zIndex = "200";
                 trBtn.style.zIndex = "300";
                 tlBtn.style.zIndex = "100";
-                // blBtn.style.zIndex = "100";
-                // brBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
             } else {
-                trActive = "translate(-5vw) translateY(0)";
+                trActive = "translateX(-5vw) translateY(0)";
                 trContent.style.transform = "translate(5vw) translateY(0)";
                 trContent.style.width = "30vw";
                 trContent.style.height = "0";
@@ -100,11 +99,81 @@ function handleWindowResize() {
              break;
 
          case "bottom-left":
-             //some code
+            if (window.innerWidth <= 600) {
+                blActive = "translateX(0) translateY(0)";
+                blContent.style.transform = "translateX(0) translateY(0)";
+                blContent.style.width = "100vw";
+                blContent.style.height = "100vh";
+                blContent.style.top = "0";
+                blContent.style.display = "flex";
+                blContent.style.alignItems = "center";
+                blContent.style.justifyContent = "center";
+                blContent.style.background = "var(--bg-transparent)";
+                blContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "300";
+                brBtn.style.zIndex = "100";
+                flavourOne.style.width = "70%";
+                flavourOne.style.margin = "auto auto 0.5rem";
+                flavourTwo.style.width = "70%";
+                flavourTwo.style.margin = "auto auto 0.5rem";
+            } else if(window.innerWidth <= 1100) {
+                blActive = "translateX(0) translateY(0)";
+                blContent.style.transform = "translateX(0) translateY(0)";
+                blContent.style.width = "100vw";
+                blContent.style.height = "100vh";
+                blContent.style.top = "0";
+                blContent.style.display = "flex";
+                blContent.style.alignItems = "center";
+                blContent.style.justifyContent = "center";
+                blContent.style.background = "var(--bg-transparent)";
+                blContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "300";
+                brBtn.style.zIndex = "100";
+                flavourOne.style.width = "40%";
+                flavourOne.style.margin = "auto auto 0.5rem";
+                flavourTwo.style.width = "40%";
+                flavourTwo.style.margin = "auto auto 0.5rem";
+            } else {
+                blActive = "translateX(10vw) translateY(7vh)";
+                blContent.style.transform = "translateX(10vw) translateY(7vh)";
+                blContent.style.width = "15rem";
+                blContent.style.height = "0";
+                blContent.style.top = "40vh";
+                blContent.style.display = "block";
+                flavourOne.style.width = "100%";
+                flavourTwo.style.width = "100%";
+            }
              break;
 
          case "bottom-right":
-             //some code
+            if (window.innerWidth <= 1100) {
+                brActive = "translateX(0) translateY(0)";
+                brContent.style.transform = "translateX(0) translateY(0)";
+                brContent.style.width = "100vw";
+                brContent.style.height = "100vh";
+                brContent.style.bottom = "0";
+                brContent.style.display = "flex";
+                brContent.style.flexDirection = "column";
+                brContent.style.alignItems = "center";
+                brContent.style.justifyContent = "center";
+                brContent.style.background = "var(--bg-transparent)";
+                brContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "300";
+            } else {
+                brActive = "translateX(-5vw) translateY(0)";
+                brContent.style.transform = "translateX(5vw) translateY(0)";
+                brContent.style.width = "30vw";
+                brContent.style.height = "0";
+                brContent.style.bottom = "30vh";
+                brContent.style.display = "block";
+            }
              break;
 
              default:
@@ -116,8 +185,8 @@ let lastReverseAnimation = "";
 
 // Play animation function
 function playAnimation(animation, reverseAnimation) {
-// Remove all the animation classes from heroImage
-heroImage.className = "";
+    // Remove all the animation classes from heroImage
+    heroImage.className = "";
 
     if (lastReverseAnimation !== "") {
         heroImage.classList.add(lastReverseAnimation);
@@ -133,10 +202,10 @@ heroImage.className = "";
 }
 
 function playClosingAnimation(reverseAnimation) {
-    tlBtn.innerHTML = "About Us"
-    trBtn.innerHTML = "Ingredients"
-    // blBtn.innerHTML = "Flavours"
-    // brBtn.innerHTML = "Policies"
+    tlBtn.innerHTML = "About Us";
+    trBtn.innerHTML = "Ingredients";
+    blBtn.innerHTML = "Flavours";
+    brBtn.innerHTML = "Contact";
 
     switch (activeCorner) {
         case "top-left":
@@ -149,16 +218,16 @@ function playClosingAnimation(reverseAnimation) {
             trBtn.style.color = textColor;
             trContent.style.transform = trHidden;
             break;
-            // case "bottom-left":
-            // tlBtn.style.background = bgColor;
-            // tlBtn.style.color = textColor;
-            // tlContent.style.transform = tlHidden;
-            // break;
-            // case "bottom-right":
-            // tlBtn.style.background = bgColor;
-            // tlBtn.style.color = textColor;
-            // tlContent.style.transform = tlHidden;
-            // break;
+            case "bottom-left":
+            blBtn.style.background = bgColor;
+            blBtn.style.color = textColor;
+            blContent.style.transform = blHidden;
+            break;
+            case "bottom-right":
+            brBtn.style.background = bgColor;
+            brBtn.style.color = textColor;
+            brContent.style.transform = brHidden;
+            break;
 
             default:
     }
@@ -174,12 +243,12 @@ function playClosingAnimation(reverseAnimation) {
 
 // Onclick corner button functions
 tlBtn.onclick = function () {
-    if(activeCorner === "top-left") {
+    if (activeCorner === "top-left") {
         playClosingAnimation("reverse-animate-top-left");
     } else {
         trBtn.innerHTML = "Ingredients";
-        // blBtn.innerHTML = "Flavours";
-        // brBtn.innerHTML = "Policies";
+        blBtn.innerHTML = "Flavours";
+        brBtn.innerHTML = "Contact";
         
         // Setting activeCorner
         activeCorner ="top-left";
@@ -190,132 +259,132 @@ tlBtn.onclick = function () {
 
         //Change background colors
         trBtn.style.background = bgColor;        
-        // brBtn.style.background = bgColor;        
+        brBtn.style.background = bgColor;        
         tlBtn.style.background = bgColorAlt;        
-        // blBtn.style.background = bgColor;
+        blBtn.style.background = bgColor;
         
         // Change text colors
         trBtn.style.color = textColor;        
-        // brBtn.style.color = textColor;        
+        brBtn.style.color = textColor;        
         tlBtn.style.color = textColorAlt;        
-        // blBtn.style.color = textColor;
+        blBtn.style.color = textColor;
 
         // Change positions of the corner content
         trContent.style.transform = trHidden;        
-        // brContent.style.transform = brHidden;        
+        brContent.style.transform = brHidden;        
         tlContent.style.transform = tlActive;        
-        // blContent.style.transform = blHidden;
+        blContent.style.transform = blHidden;
 
 
     }
 };
 
  trBtn.onclick = function () {
-     if(activeCorner == "top-right") {
+     if(activeCorner === "top-right") {
          playClosingAnimation("reverse-animate-top-right");
      } else {
-         tlBtn.innerHTML = "About us";
-        //  blBtn.innerHTML = "Flavours";
-        //  brBtn.innerHTML = "Policies";
+        tlBtn.innerHTML = "About us";
+        blBtn.innerHTML = "Flavours";
+        brBtn.innerHTML = "Contact";
 
          // Setting activeCorner
-         activeCorner ="top-left";
-         tlBtn.innerHTML = "&uarr;<br/>Ingredients";
+         activeCorner ="top-right";
+         trBtn.innerHTML = "&uarr;<br/>Ingredients";
 
          handleWindowResize();
          playAnimation("animate-top-right", "reverse-animate-top-right");
 
          //Change background colors
          trBtn.style.background = bgColorAlt;        
-         // brBtn.style.background = bgColor;        
+         brBtn.style.background = bgColor;        
          tlBtn.style.background = bgColor;        
-         // blBtn.style.background = bgColor;
+         blBtn.style.background = bgColor;
         
          // Change text colors
          trBtn.style.color = textColorAlt;        
-         // brBtn.style.color = textColor;        
+         brBtn.style.color = textColor;        
          tlBtn.style.color = textColor;        
-         // blBtn.style.color = textColor;
+         blBtn.style.color = textColor;
 
          // Change positions of the corner content
          trContent.style.transform = trActive;        
-         //brContent.style.transform = brHidden;        
+         brContent.style.transform = brHidden;        
          tlContent.style.transform = tlHidden;        
-         //blContent.style.transform = blHidden;
+         blContent.style.transform = blHidden;
 
     }
 };
 
-// blBtn.onclick = function () {
-//     if(activeCorner == "bottom-left") {
-//         playClosingAnimation("reverse-animate-bottom-left");
-//     } else {
-//         tlBtn.innerHTML = "About us";
-//         trBtn.innerHTML = "Ingredients";
-//         brBtn.innerHTML = "Policies";
+blBtn.onclick = function () {
+    if(activeCorner === "bottom-left") {
+        playClosingAnimation("reverse-animate-bottom-left");
+    } else {
+        tlBtn.innerHTML = "About us";
+        trBtn.innerHTML = "Ingredients";
+        brBtn.innerHTML = "Contact";
 
-//         // Setting activeCorner
-//         activeCorner ="bottom-left";
-//         tlBtn.innerHTML = "Flavours<br/>&darr;";
+        // Setting activeCorner
+        activeCorner ="bottom-left";
+        blBtn.innerHTML = "Flavours<br/>&darr;";
 
-//         handleWindowResize();
-//         playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
+        handleWindowResize();
+        playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
 
-//         //Change background colors
-//         trBtn.style.background = bgColor;        
-//         brBtn.style.background = bgColor;        
-//         tlBtn.style.background = bgColor;        
-//         blBtn.style.background = bgColorAlt;
+        //Change background colors
+        trBtn.style.background = bgColor;        
+        brBtn.style.background = bgColor;        
+        tlBtn.style.background = bgColor;        
+        blBtn.style.background = bgColorAlt;
         
-//         // Change text colors
-//         trBtn.style.color = textColor;        
-//         brBtn.style.color = textColor;        
-//         tlBtn.style.color = textColor;        
-//         blBtn.style.color = textColorAlt;
+        // Change text colors
+        trBtn.style.color = textColor;        
+        brBtn.style.color = textColor;        
+        tlBtn.style.color = textColor;        
+        blBtn.style.color = textColorAlt;
 
-//         // Change positions of the corner content
-//         trContent.style.transform = trHidden;        
-//         brContent.style.transform = brHidden;        
-//         tlContent.style.transform = tlHidden;        
-//         blContent.style.transform = blActive;
+        // Change positions of the corner content
+        trContent.style.transform = trHidden;        
+        brContent.style.transform = brHidden;        
+        tlContent.style.transform = tlHidden;        
+        blContent.style.transform = blActive;
 
 
-//     }
-// }
+    }
+};
 
-// brBtn.onclick = function () {
-//     if(activeCorner == "bottom-right") {
-//         playClosingAnimation("reverse-animate-bottom-right");
-//     } else {
-//         tlBtn.innerHTML = "About us";
-//         trBtn.innerHTML = "Ingredients";
-//         blBtn.innerHTML = "Flavours";
+brBtn.onclick = function () {
+    if(activeCorner === "bottom-right") {
+        playClosingAnimation("reverse-animate-bottom-right");
+    } else {
+        tlBtn.innerHTML = "About us";
+        trBtn.innerHTML = "Ingredients";
+        blBtn.innerHTML = "Flavours";
 
-//         // Setting activeCorner
-//         activeCorner ="bottom-left";
-//         tlBtn.innerHTML = "Policies<br/>&darr;";
+        // Setting activeCorner
+        activeCorner ="bottom-right";
+        brBtn.innerHTML = "Contact<br/>&darr;";
 
-//         handleWindowResize();
-//         playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
+        handleWindowResize();
+        playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
 
-//         //Change background colors
-//         trBtn.style.background = bgColor;        
-//         brBtn.style.background = bgColorAlt;        
-//         tlBtn.style.background = bgColor;        
-//         blBtn.style.background = bgColor;
+        //Change background colors
+        trBtn.style.background = bgColor;        
+        brBtn.style.background = bgColorAlt;        
+        tlBtn.style.background = bgColor;        
+        blBtn.style.background = bgColor;
         
-//         // Change text colors
-//         trBtn.style.color = textColor;        
-//         brBtn.style.color = textColorAlt;        
-//         tlBtn.style.color = textColor;        
-//         blBtn.style.color = textColor;
+        // Change text colors
+        trBtn.style.color = textColor;        
+        brBtn.style.color = textColorAlt;        
+        tlBtn.style.color = textColor;        
+        blBtn.style.color = textColor;
 
-//         // Change positions of the corner content
-//         trContent.style.transform = trHidden;        
-//         brContent.style.transform = brActive;        
-//         tlContent.style.transform = tlHidden;        
-//         blContent.style.transform = blHidden;
+        // Change positions of the corner content
+        trContent.style.transform = trHidden;        
+        brContent.style.transform = brActive;        
+        tlContent.style.transform = tlHidden;        
+        blContent.style.transform = blHidden;
 
 
-//     }
-// }
+    }
+}
