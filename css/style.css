@@ -186,7 +186,7 @@ article p {
     gap: 2rem;
 }
 
-.ingredients__skill {
+.ingredients__food {
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
@@ -195,30 +195,30 @@ article p {
     width: fit-content;
 }
 
-.ingredients__skill div {
+.ingredients__food div {
     display: flex;
     align-items: center;
     width: 13.5rem;
 }
 
-.ingredients__skill div img {
+.ingredients__food div img {
     padding: 0;
     margin-right: 0.5rem;
 }
 
-.ingredients__skill div h2 {
+.ingredients__food div h2 {
     text-align: left;
 }
 
-.ingredients__skill div p {
+.ingredients__food div p {
     padding: 0;
 }
 
-.ingredients__skill div h2, .ingredients__skill div p {
+.ingredients__food div h2, .ingredients__skill div p {
     font-size: 0.8rem;
 }
 
-.ingredients__skill div div {
+.ingredients__food div div {
     justify-content: space-between;
 }
 
