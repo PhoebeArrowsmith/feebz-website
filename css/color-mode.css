@@ -6,7 +6,8 @@
     --bg-transparent: #ffffffe8;
     --border: 0.01rem solid #BB4444;
     --text: #BB4444;
-    --text-alt: #FF8989;
+    --text-alt: #333;
+    --text-alt-2: #FF8989;
   
     /* Can animations */
     --tl-1: url(../assets/feebz-animation/tl-1.png);

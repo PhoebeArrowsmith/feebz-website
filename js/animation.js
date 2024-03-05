@@ -23,7 +23,7 @@ const flavourTwo = document.querySelector(".f-2");
 const bgColor ="var(--bg)";
 const bgColorAlt ="var(--bg-alt)";
 const textColor ="var(--text)";
-const textColorAlt ="var(--text-alt)";
+const textColorAlt ="var(--text-alt-2)";
 
 let tlActive = "translateX(5vw) translateY(0)";
 let tlHidden = "translateX(-100vw) translateY(-100vh)";

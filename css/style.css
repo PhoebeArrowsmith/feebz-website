@@ -13,9 +13,9 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-h1, h2, h5, p{
+h1, h2, h5{
     margin: 0;
-    color: #982123;
+    color: var(--text);
 }
 
 .icon {
@@ -53,6 +53,10 @@ h1, h2, h5, p{
     background-repeat: no-repeat;
 }
 
+#info {
+    color: var(--text);
+}
+
 /* GRID COMMON STYLES */
 
 #grid{
@@ -68,8 +72,8 @@ h1, h2, h5, p{
 #grid__tl__btn, #grid__tr__btn, #grid__bl__btn, #grid__br__btn {
     height: 18.75rem;
     width: 18.75rem;
-    background: #FF8989;
-    color: #BB4444 ;
+    background: var(--bg);
+    color: var(--text) ;
     border: var(--border);
     position: fixed;
     display: flex;
@@ -87,7 +91,6 @@ h1, h2, h5, p{
     position: absolute;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    color: #BB4444;
 }
 
 #grid__tl__btn, #grid__tr__btn{
@@ -113,7 +116,7 @@ h1, h2, h5, p{
     top: -11.5rem;
     left: -11.5rem;
     transform: rotate(-45deg);
-    background: #FF8989;
+    background: var(--bg);
 }
 
 #grid__tl__content {
@@ -124,7 +127,7 @@ h1, h2, h5, p{
 }
 
 article {
-    background: #FF8989;
+    background: var(--bg);
     font-size: 0.8rem;
     list-style: none;
     border: var(--border);
@@ -146,7 +149,7 @@ article p {
 
 article h2,
 article p {
-  color: #333;
+  color: var(--text-alt);
 }
 
 .cards {
@@ -257,7 +260,7 @@ article p {
 }
 
 h2.flavours__title.lemon {
-    color: #606060 !important;
+    color: #606060;
 }
 
 .flavours__img{
@@ -333,7 +336,7 @@ button {
 }
 
 .contact-text {
-    color: var(--text);
+    color: var(--text-alt);
 }
 
 .btn-contact {
